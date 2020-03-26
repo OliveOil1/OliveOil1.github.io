@@ -33,15 +33,61 @@
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         }
+                 /* The sidebar menu */
+        .sidenav {
+            height: 100%; /* Full-height: remove this if you want "auto" height */
+            width: 160px; /* Set the width of the sidebar */
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+             z-index: 1; /* Stay on top */
+             top: 0; /* Stay at the top */
+             left: 0;
+            background-color: #111; /* Black */
+              overflow-x: hidden; /* Disable horizontal scroll */
+              padding-top: 20px;
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Style page content */
+        .main {
+            margin-left: 160px; /* Same as the width of the sidebar */
+            padding: 0px 10px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        } 
     </style>
     <title>Oliveoil1's website</title>
 </head>
 
 <body>
-    <div style="padding-left:16px">
-        <h1>Welcome to Oliveoil1's Website!</h1>
+<!-- Side navigation -->
+    <div class="sidenav">
+        <center><a href="https://livetrafficfeed.com/website-counter" data-time="Pacific%2FFiji" data-root="0" id="LTF_counter_href">Free Visitors Counter</a><script type="text/javascript" src="//cdn.livetrafficfeed.com/static/static-counter/live.v2.js"></script><noscript><a href="https://livetrafficfeed.com/website-counter">Free Visitors Counter</a></noscript></center>
+    </div>
 
-        <p class="underconstruction">⚠ Under construction, check back later ⚠</p>
+<!-- Main Content -->
+    <div class="main">
+        <div style="padding-left:16px">
+            <h1>Welcome to Oliveoil1's Website!</h1>
+
+            <p class="underconstruction">⚠ Under construction, check back later ⚠</p>
+        </div>
     </div>
 </body>
 
