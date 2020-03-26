@@ -3,10 +3,63 @@
 <head>
     <link rel="stylesheet" href="styles.css">
     <style>
-        h1 {
+        * {
+          box-sizing: border-box;
+        }
+
+        .row {
+          margin: 8px -16px;
+        }
+
+        /* Add padding BETWEEN each column (if you want) */
+        .row,
+        .row > .column {
+          padding: 8px;
+        }
+
+        /* Create four equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 25%;
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Content */
+        .content {
+          background-color: whitesmoke;
+          padding: 10px;
+          border-style: solid;
+          border-width: thin;
+          border-color: grey;
+          border-radius: 10px;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+          .column {
+            width: 50%;
+          }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+          }
+        }
+
+        .grid {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-        } 
+            color: inherit;
+            text-decoration: inherit;
+        }
     </style>
     <title>Oliveoil1's website</title>
 </head>
@@ -31,11 +84,18 @@
         <div style="padding-left:16px">
             <h1>My Projects</h1>
 
-            <p class="underconstruction">⚠ Under construction, check back later ⚠</p>
-
-            
+            <div class="row">
+                <div class="column">                   
+                    <div class="content">   
+                        <a href="newtabbackground.html" class="grid">
+                            <img src="https://camo.githubusercontent.com/d1295469b98669daa2ae01df4c906bc39de1ebfc/68747470733a2f2f6f6c6976656f696c312e6769746875622e696f2f6173736574732f416e6e6f746174696f6e253230323031392d30392d31382532303136343232302e706e67" alt="New Tab Background" style="width:100%">
+                            <h3>New Tab Background</h3>
+                            <p>A Firefox tweak to make new tabs look better</p> 
+                        </a> 
+                    </div>   
+                </div>
+            </div>
         </div>
     </div>
 </body>
-
 </html>
